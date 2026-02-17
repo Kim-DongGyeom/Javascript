@@ -10,14 +10,32 @@
     <div class="content">
       <!-- content_head ~ -->
       <div class="content_head">
-        <h1 class="head">ToDoList</h1>
+        <h1>ToDoList</h1>
         <div class="clock"></div>
       </div>
       <!-- ~ content_head -->
       <!-- content_inner ~ -->
       <div class="content_inner">
-        <div class="constent">
-          <input type="checkbox" />
+        <div class="constent_menu">
+          <form>
+            <input
+              class="toDo_input"
+              type="text"
+              placeholder="作業を入力してください。"
+            />
+            <input
+              class="toDo_addBtn"
+              type="submit"
+              value="追加"
+              onclick="console.log('add')"
+            />
+          </form>
+          <input
+            class="toDo_delBtn"
+            type="button"
+            value="削除"
+            onclick="console.log('del')"
+          />
         </div>
       </div>
       <!-- ~ content_inner -->

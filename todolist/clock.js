@@ -1,4 +1,4 @@
-(function () {
+(function clock() {
   // DOM
   const clock = document.querySelector('.clock');
 
