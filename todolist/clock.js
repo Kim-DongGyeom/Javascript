@@ -9,7 +9,7 @@
      * []には現在の曜日を数字で表す dayOfWeek　を反映
      * ex) 0 => 日, 1 => 月 ...
      */
-    const dayOfWeekList = ['日', '月', '火', '水', '木', '金', '土'];
+    const DAY_OF_WEEK_LIST = ['日', '月', '火', '水', '木', '金', '土'];
 
     // utill
     /**
@@ -26,7 +26,7 @@
      */
     const month = setNum(date.getMonth() + 1);
     const day = setNum(date.getDate());
-    const dayOfWeek = dayOfWeekList[date.getDay()];
+    const dayOfWeek = DAY_OF_WEEK_LIST[date.getDay()];
     const time = date.toString().slice(16, 24);
 
     clock.textContent = `${year}年 ${month}月 ${day}日 (${dayOfWeek}) ${time}`;
