@@ -70,3 +70,12 @@ localStorage.removeItem("key");
 // *すべて削除*
 localStorage.clear();
 ```
+
+```markdown
+---memo---
+* 調べる予定
+ - call by value
+ - call bay referance
+ - js object プリミティブ値, 違い
+
+```
