@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ToDoList</title>
+		<link rel="stylesheet" href="./index.css" />
+	</head>
+	<body>
+		<!-- content ~ -->
+		<div class="content">
+			<!-- content_head ~ -->
+			<div class="content_head">
+				<h1>ToDoList</h1>
+				<div class="clock"></div>
+			</div>
+			<!-- ~ content_head -->
+			<!-- content_head ~ -->
+
+            <div class="content_inner">
+				<div class="constent_menu">
+					<form>
+						<input
+							class="toDo_input"
+							type="text"
+							placeholder="作業を入力してください。"
+						/>
+						<input class="toDo_addBtn btn" type="submit" value="追加" />
+						<input class="toDo_multiDelBtn btn" type="button" value="削除" />
+					</form>
+				</div>
+
+				<!-- toDo_list ~ -->
+				<div class="toDo_list"></div>
+				<!-- ~ toDo_list -->
+			</div>
+			<!-- ~ content_inner -->
+		</div>
+		<!-- ~ content -->
+
+		<script src="./index.js"></script>
+		<script src="./clock.js"></script>
+		<!-- <script src="./dumpData.js"></script> -->
+	</body>
+</html>
