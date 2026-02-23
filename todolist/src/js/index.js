@@ -22,7 +22,8 @@
 		return `${year}年 ${month}月 ${day}日 (${dayOfWeek}) ${time}`;
 	};
 
-	let data;
+    let data;
+
 	const loadTodo = () => {
 		// データをlocalstrageから取得
 		data = JSON.parse(localStorage.getItem(TODOLIST)) || [];
@@ -52,7 +53,6 @@
 	const findIdx = (list, id) => {
 		return list.findIndex(list => list.id === id);
 	};
-
 	const toggle = id => {
 		// idとindexが異なる可能性があるため、ループで対象のデータを探す
 		/*
@@ -64,9 +64,9 @@
         }
       }
       */
-		// const item = data.find(todo => todo.id === id);
+        console.log(id);
 		const idx = findIdx(data, id);
-		data[idx].state = !data[idx].state;
+        data[idx].state = !data[idx].state;
 		console.log(data[idx]);
 	};
 
@@ -81,7 +81,7 @@
 		document.getElementById(id).remove();
 		const idx = findIdx(data, id);
 		data.splice(idx, 1);
-		console.log(data);
+		// console.log(data);
 		setToDoList();
 	};
 
@@ -106,15 +106,18 @@
 
 		const div = document.createElement('div');
 		div.id = id;
-		div.className = 'ToDo_list_item';
+        div.className = 'ToDo_list_item';
+        div.addEventListener('click', () => {
+            toggle(id)
+        })
 
 		const checkBox = document.createElement('input');
 		checkBox.className = 'Todo_List_State';
 		checkBox.type = 'checkbox';
 		checkBox.checked = state;
-		checkBox.addEventListener('click', () => {
-			toggle(id);
-		});
+		// checkBox.addEventListener('click', () => {
+		// 	toggle(id);
+		// });
 		div.append(checkBox);
 
 		const textDiv = document.createElement('div');

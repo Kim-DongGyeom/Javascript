@@ -14,20 +14,21 @@
   };
 
   const Createlist = () => {
-    const TODOLIST = 'test';
-    //   const TODOLIST = 'toDoList';
+    // const TODOLIST = 'test';
+    const TODOLIST = 'toDoList';
     const data = [];
 
+    var SetState = false;
     for (let i = 0; i <= 5; i++) {
-      const addItem = { state: false, content: `test-${i}`, time: getTime() };
-      data.push(addItem);
+        SetState = !SetState;
+        var addItem = { state: SetState, content: `test-${i}`, time: getTime() };
+        data.push(addItem);
     }
 
     console.log(data);
 
     const save = data.map(item => {
       const list = Object.assign({}, item);
-      delete list.state;
       return list;
     });
 
