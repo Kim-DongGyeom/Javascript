@@ -2,7 +2,7 @@
   const getTime = () => {
     const DAY_OF_WEEK_LIST = ['日', '月', '火', '水', '木', '金', '土'];
 
-    const setNum = item => String(item).padStart(2, '0');
+    const setNum = (item) => String(item).padStart(2, '0');
     const date = new Date();
     const year = date.getFullYear();
     const month = setNum(date.getMonth() + 1);
@@ -20,14 +20,14 @@
 
     var SetState = false;
     for (let i = 0; i <= 5; i++) {
-        SetState = !SetState;
-        var addItem = { state: SetState, content: `test-${i}`, time: getTime() };
-        data.push(addItem);
+      SetState = !SetState;
+      var addItem = { state: SetState, content: `test-${i}`, time: getTime() };
+      data.push(addItem);
     }
 
     console.log(data);
 
-    const save = data.map(item => {
+    const save = data.map((item) => {
       const list = Object.assign({}, item);
       return list;
     });

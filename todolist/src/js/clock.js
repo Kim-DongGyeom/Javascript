@@ -16,7 +16,7 @@
      * itemが 10 未満の場合、 0をつける
      * ex) 1 => 01, 2 => 02 ...
      */
-    const setNum = item => String(item).padStart(2, '0');
+    const setNum = (item) => String(item).padStart(2, '0');
 
     const date = new Date();
 
