@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div id="alert" class="alert-box hidden">
+      <p id="message">Alert</p>
+      <button
+        id="closeBtn"
+        class="close-btn"
+        type="button"
+        value="none"
+        onclick="btn('none')"
+      >
+        閉じる
+      </button>
+    </div>
+    <button
+      id="openBtn"
+      class="open-btn"
+      type="button"
+      value="block"
+      onclick="LoginBtn('message', 'ID', 'block')"
+    >
+      ID
+    </button>
+    <button
+      id="openBtn"
+      class="open-btn"
+      type="button"
+      value="block"
+      onclick="LoginBtn('message', 'PW', 'block')"
+    >
+      PW
+    </button>
+  </body>
+  <!-- <script src="./js/ver1.js"></script> -->
+  <script src="./js/ver2.js"></script>
+</html>
