@@ -69,13 +69,15 @@ body {
 form {
   display: flex;
   width: 80%;
+  justify-content: center;
 }
 
 .toDo_input {
+  margin: auto;
   font-size: 15px;
   padding: 5px 10px;
   width: 300px;
-  border-radius: 5px;
+  border-radius: 5px;å
 }
 
 .btn {
@@ -84,7 +86,7 @@ form {
 }
 
 .toDo_addBtn {
-  margin-left: auto;
+  /* margin-left: auto; */
 }
 
 .toDo_list {

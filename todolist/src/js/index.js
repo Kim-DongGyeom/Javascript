@@ -70,9 +70,15 @@
 
   const toDoMultiDel = () => {
     const filter = data.filter((item) => item.state === true);
-    filter.forEach((item) => {
-      toDoDel(item.id);
-    });
+    if (filter[0]) {
+      if (confirm('選択されたものが削除されます。')) {
+        filter.forEach((item) => {
+          toDoDel(item.id);
+        });
+      }
+    } else {
+      alert('削除するTodoListを選択してください。');
+    }
   };
 
   const toDoDel = (id) => {
