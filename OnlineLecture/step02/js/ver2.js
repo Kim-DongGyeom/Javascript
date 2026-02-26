@@ -1,4 +1,4 @@
-// ver1 onclick event
+// ver2 addEventListener
 
 // Select DOM elements by id
 const alertBox = document.getElementById('alert');

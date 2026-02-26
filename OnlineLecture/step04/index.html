@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <!-- modal ~ -->
+    <div class="black-bg">
+      <div class="white-bg">
+        <h4></h4>
+        <button class="btn btn-danger" id="closeModal">閉じる</button>
+      </div>
+    </div>
+    <!-- ~ modal -->
+
+    <!-- nav ~ -->
+    <nav class="navbar navber-light bg-light">
+      <div class="container-fluid">
+        <span class="navbar-brand">Navbar</span>
+        <button class="navber-toggler" type="button">
+          <span class="navber-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- ~ nav -->
+
+    <!-- list ~ -->
+    <ul class="list-group">
+      <li class="list-group-item">An item</li>
+      <li class="list-group-item">A second item</li>
+      <li class="list-group-item">A third tiem</li>
+      <li class="list-group-item">A fourth item</li>
+      <li class="list-group-item">And a fifty one</li>
+    </ul>
+    <!-- ~ list -->
+
+    <button class="btn open-modal" id="openModal">Modal</button>
+  </body>
+  <script>
+    const Modal = document.querySelector('.black-bg');
+    const openModal = document.getElementById('openModal');
+    const closeModal = document.getElementById('closeModal');
+
+    openModal.addEventListener('click', () => {
+      return Modal.classList.add('show-modal');
+    });
+    closeModal.addEventListener('click', () => {
+      return Modal.classList.remove('show-modal');
+    });
+  </script>
+</html>

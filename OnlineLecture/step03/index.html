@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- ライブラリJQuery -->
+    <!-- memo: ページロード性能のため、ライブラリはbodyTagの終わりの前に置く -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <p id="JQueryText" class="JQuery_text">JQueryテキスト変更</p>
+    <button id="testBtn" class="test-btn">ボタン</button>
+  </body>
+  <script>
+    // ver3 JQuery
+
+    // document.getElementById('JQueryText').innerHTML = '初期化';
+    // document.querySelector('.JQuery_text').innerHTML = '初期化';
+
+    /*
+      $('.JQuery_text').html('TextUpdate');
+      $('.JQuery_text').css('color', 'red');
+      $('.JQuery_text').addClass('add_class');
+      $('.JQuery_text').removeClass('remove_class');
+      $('.JQuery_text').toggleClass('toggle_class');
+    */
+
+    $('.JQuery_text').html('text');
+
+    // document.getElementById('testBtn').addEventListener('event', () => {});
+    $('#testBtn').on('click', () => {
+      // // display none似たような機能
+      //   $('.JQueryText').hide();
+
+      // UI アニメーション
+      //   $('.JQueryText').fadeOut();
+      $('.JQueryText').slideUp();
+    });
+  </script>
+</html>
