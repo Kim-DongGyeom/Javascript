@@ -39,11 +39,12 @@
     <!-- ~ modal -->
 
     <!-- nav ~ -->
-    <nav class="navbar navber-light bg-light">
+    <nav class="navbar navbar-light bg-light">
       <div class="container-fluid">
-        <span class="navbar-brand">Navbar</span>
-        <button class="navber-toggler" type="button">
-          <span class="navber-toggler-icon"></span>
+        <span class="navbar-brand">JSShop</span>
+        <span class="badge bg-dark">Dark</span>
+        <button class="navbar-toggler" type="button">
+          <span class="navbar-toggler-icon"></span>
         </button>
       </div>
     </nav>
@@ -63,33 +64,9 @@
       <h4>shirts on Sale</h4>
       <button id="openModal" class="btn btn-danger open-modal">login</button>
     </div>
+
+    <div class="alert alert-danger">5秒以内に購入すると特典あり!!</div>
+
+    <script src="../js/index.js"></script>
   </body>
-
-  <script>
-    const Modal = document.querySelector('.black-bg');
-    const openModal = document.getElementById('openModal');
-    const closeModal = document.getElementById('closeModal');
-
-    const email = document.getElementById('email');
-    const password = document.getElementById('password');
-
-    console.log();
-
-    openModal.addEventListener('click', () => {
-      return Modal.classList.add('show-modal');
-    });
-    closeModal.addEventListener('click', () => {
-      return Modal.classList.remove('show-modal');
-    });
-
-    const form = document.querySelector('form');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      if (email.value === '' && password.value === '') {
-        alert('ログイン情報を入力してください。');
-      } else if (password.value.length < 6) {
-        alert('パスワードは6文字以上で入力してください。');
-      }
-    });
-  </script>
 </html>

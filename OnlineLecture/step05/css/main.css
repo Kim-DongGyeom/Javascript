@@ -11,6 +11,12 @@
   transition: all 1s;
 }
 
+.white-bg {
+  background: white;
+  border-radius: 5px;
+  padding: 30px;
+}
+
 .main-bg {
   padding: 100px 20px;
   background: lightgray;
@@ -21,8 +27,8 @@
   opacity: 1;
 }
 
-.white-bg {
-  background: white;
-  border-radius: 5px;
-  padding: 30px;
+.list-group {
+  display: none;
+}
+.list-group-item {
 }
