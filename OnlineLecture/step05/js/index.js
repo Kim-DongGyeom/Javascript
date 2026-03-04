@@ -79,25 +79,20 @@ closeModal.addEventListener('click', () => {
 slide1.addEventListener('click', () => {
   translateX = 0;
   slideImg(0);
-  console.log(translateX);
 });
 slide2.addEventListener('click', () => {
   translateX = -100;
   slideImg(-100);
-  console.log(translateX);
 });
 slide3.addEventListener('click', () => {
   translateX = -200;
   slideImg(-200);
-  console.log(translateX);
 });
 slidePrev.addEventListener('click', () => {
-  //   console.log(SetslideImg('<'));
   slideImg(SetslideImg('<'));
   console.log(translateX);
 });
 slideNext.addEventListener('click', () => {
-  //   console.log(SetslideImg('>'));
   slideImg(SetslideImg('>'));
   console.log(translateX);
 });
@@ -116,3 +111,6 @@ badge.addEventListener('click', () => {
     badge.innerHTML = 'Dark';
   }
 });
+
+// 260304 start step2-4
+0;
