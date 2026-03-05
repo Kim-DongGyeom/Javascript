@@ -17,21 +17,40 @@
     <!-- modal ~ -->
     <div class="black-bg">
       <div class="white-bg">
-        <h4>Login</h4>
+        <div style="display: flex; justify-content: space-between">
+          <h4>Login</h4>
+          <button type="button" class="btn btn-praimary" id="closeModal">
+            X
+          </button>
+        </div>
 
         <form action="success.html">
           <div class="my-3">
-            <input type="text" id="email" class="form-control" />
+            <input
+              type="text"
+              id="email"
+              class="form-control"
+              placeholder="email"
+            />
           </div>
           <div class="my-3">
-            <input type="password" id="password" class="form-control" />
+            <input
+              type="password"
+              id="password"
+              class="form-control"
+              placeholder="password"
+            />
           </div>
-          <button type="submit" id="send" class="btn btn-praimary">
-            ログイン
-          </button>
-          <button type="button" class="btn btn-danger" id="closeModal">
-            キャンセル
-          </button>
+          <div>
+            <button
+              type="submit"
+              id="send"
+              class="btn btn-danger"
+              style="width: 100%"
+            >
+              ログイン
+            </button>
+          </div>
         </form>
       </div>
     </div>
@@ -40,12 +59,20 @@
     <!-- nav ~ -->
     <nav class="navbar navbar-light bg-light">
       <div class="container-fluid">
-        <span class="navbar-brand">JSShop</span>
-        <span class="badge bg-dark">Dark</span>
-        <button class="navbar-toggler" type="button">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <div>
+          <span class="navbar-brand">JSShop</span>
+        </div>
+        <div>
+          <span class="badge bg-dark">Dark</span>
+          <button class="navbar-toggler" type="button">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
       </div>
+      <!-- scroll ~ -->
+
+      <div class="scroll-bar"></div>
+      <!-- ~ scroll-->
     </nav>
     <!-- ~ nav -->
 
@@ -72,7 +99,7 @@
     </div>
 
     <div style="height: 1000px"></div>
-    <!-- slide-Box ~ -->
+    <!-- slide-box ~ -->
     <div style="overflow: hidden">
       <div class="slide-container">
         <div class="slide-box">
@@ -91,7 +118,7 @@
     <button class="slide-2">2</button>
     <button class="slide-3">3</button>
     <button class="slide-next">></button>
-    <!-- ~ slide-Box -->
+    <!-- ~ slide-box -->
 
     <!-- slideImg ver1 -->
     <!-- <script src="../js/index.js"></script> -->

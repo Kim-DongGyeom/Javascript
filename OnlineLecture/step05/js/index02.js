@@ -1,3 +1,6 @@
+// html
+const dom = document.querySelector('html');
+
 // Modal
 const modal = document.querySelector('.black-bg');
 const openModal = document.getElementById('openModal');
@@ -11,6 +14,7 @@ const password = document.getElementById('password');
 //nav
 const badge = document.querySelector('.badge');
 const navbarBrand = document.querySelector('.navbar-brand');
+const scrollBar = document.querySelector('.scroll-bar');
 
 // slide-box
 const slideBox = document.querySelectorAll('.slide-box');
@@ -91,7 +95,7 @@ openModal.addEventListener('click', () => {
   modal.classList.add('show-modal');
 });
 closeModal.addEventListener('click', () => {
-  Modal.classList.remove('show-modal');
+  modal.classList.remove('show-modal');
 });
 
 // slide1.addEventListener('click', () => {
@@ -139,22 +143,36 @@ window.addEventListener('scroll', () => {
   //   window.scrollBy(0, 200);
   navbarBrand.style.fontSize = `${transFontSize(window.scrollY)}px`;
 });
-console.log(lorem.scrollHeight);
-console.log(lorem.clientHeight);
+// console.log(lorem.scrollHeight);
+// console.log(lorem.clientHeight);
 
 lorem.addEventListener('scroll', () => {
   //スクロール量
   // console.log(lorem.scrollTop);
 
-  //スクロール可能な最大値
+  //スクロール可能な高さ
   //   console.log(lorem.scrollHeight);
 
   // 表示される高さ
   //   console.log(lorem.clientHeight);
 
-  if (lorem.scrollHeight - 5 < lorem.scrollTop + lorem.clientHeight) {
+  if (lorem.scrollTop + lorem.clientHeight > lorem.scrollHeight - 5) {
     alert('確認済み');
   }
+});
+
+console.log('현재 스크롤 량', dom.scrollTop);
+console.log('최대 높이', dom.scrollHeight);
+console.log('스크롤 가능한 량', dom.clientHeight);
+
+var scrollHeight = 0;
+
+window.addEventListener('scroll', () => {
+  scrollHeight = Math.round(
+    (window.scrollY / (dom.scrollHeight - dom.clientHeight)) * 100,
+  );
+  scrollBar.style.width = `${scrollHeight}%`;
+  console.log(scrollHeight);
 });
 
 // 260304 start step2-7
