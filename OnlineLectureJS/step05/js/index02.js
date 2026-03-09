@@ -161,10 +161,6 @@ lorem.addEventListener('scroll', () => {
   }
 });
 
-console.log('현재 스크롤 량', dom.scrollTop);
-console.log('최대 높이', dom.scrollHeight);
-console.log('스크롤 가능한 량', dom.clientHeight);
-
 var scrollHeight = 0;
 
 window.addEventListener('scroll', () => {
@@ -172,7 +168,4 @@ window.addEventListener('scroll', () => {
     (window.scrollY / (dom.scrollHeight - dom.clientHeight)) * 100,
   );
   scrollBar.style.width = `${scrollHeight}%`;
-  console.log(scrollHeight);
 });
-
-// 260304 start step2-7

@@ -1,0 +1,32 @@
+.list {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.tab-button {
+  list-style: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  color: #999;
+  border: 1px solid transparent;
+  border-bottom: none;
+}
+
+.orange {
+  color: #333;
+  border: 1px solid #ddd;
+  border-bottom: 1px solid white;
+  border-top: 3px solid #f5a623; /* 주황색 라인 */
+  background: white;
+}
+
+.tab-content {
+  display: none;
+  padding: 20px 0;
+}
+
+.show {
+  display: block;
+}
