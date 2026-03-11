@@ -1,13 +1,12 @@
 // export default function Modal(...props) {
 export default function Modal(props) {
-  const { index, title, setTitle } = props;
+  const { index, title, date, setTitle } = props;
 
-  const date = 'props.date';
   const content = 'props.content';
   return (
     <div className='modal'>
       <h4>{title[index]}</h4>
-      <p>{date}</p>
+      <p>{date[index]}</p>
       <p>{content}</p>
       <button
         onClick={() => {
