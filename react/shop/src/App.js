@@ -1,21 +1,37 @@
-// bootstarap commponents
-import { Button, Navbar, Container, Nav } from 'react-bootstrap';
+// react
+import { useState } from 'react';
+import { Routes, Route, Link } from 'react-router-dom';
 
+// components
+import Navigation from './components/Navigation';
+import Product from './components/Product';
+
+// file
 import './App.css';
+import data from './utils/data';
 
 function App() {
+  const color = 'light';
+  const [shoes] = useState(data);
+
   return (
-    <div>
-      <Navbar bg='dark' data-bs-theme='dark'>
-        <Container>
-          <Navbar.Brand href='#home'>React-Shop</Navbar.Brand>
-          <Nav className='me-auto'>
-            <Nav.Link href='#home'>Home</Nav.Link>
-            <Nav.Link href='#features'>Features</Nav.Link>
-            <Nav.Link href='#pricing'>Pricing</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
+    <div className='App'>
+      <Routes>
+        <Route />
+        <Route />
+        <Route />
+        <Route />
+      </Routes>
+
+      <Navigation color={color} />
+      <div className='row'>
+        <div className='main-bg'></div>
+        {shoes
+          ? shoes.map((item, idx) => {
+              return <Product item={item} idx={idx} key={'key' + idx} />;
+            })
+          : ''}
+      </div>
     </div>
   );
 }

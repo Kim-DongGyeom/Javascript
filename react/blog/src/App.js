@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { AiOutlineLike } from 'react-icons/ai';
 
-import Modal from './Components/modal';
+import Modal from './Components/Modal';
 import Profile from './Components/Profile';
 
 import './App.css';
