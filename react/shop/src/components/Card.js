@@ -1,4 +1,4 @@
-export default function Product(props) {
+export default function Card(props) {
   const { item, idx } = props;
   return (
     <div className='col-md-4'>

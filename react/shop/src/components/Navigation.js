@@ -1,7 +1,5 @@
 // bootstarap commponents
 import { Navbar, Container, Nav } from 'react-bootstrap';
-
-// navigation items
 import items from './../utils/Navigation.json';
 
 export default function Navigation(props) {
