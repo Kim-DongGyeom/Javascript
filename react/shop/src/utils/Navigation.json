@@ -8,6 +8,10 @@
     "name": "detail"
   },
   {
+    "href": "/cart",
+    "name": "cart"
+  },
+  {
     "href": "/about",
     "name": "about"
   },
