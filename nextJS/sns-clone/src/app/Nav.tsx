@@ -21,6 +21,9 @@ export default function Nav() {
         <Link href='/api/posts'>api/posts</Link>
       </div>
       <div>
+        <Link href='/qna'>Q&A</Link>
+      </div>
+      {/* <div>
         <input
           type='text'
           value={id}
@@ -36,7 +39,7 @@ export default function Nav() {
         >
           OK
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }
