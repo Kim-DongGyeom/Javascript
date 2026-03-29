@@ -98,6 +98,7 @@ export default function QnaPage() {
           <div>：</div>
           <div className='w-full border-b-1 solid'>
             <input
+              className='w-full focus:outline-none'
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               placeholder='タイトル'
@@ -108,7 +109,7 @@ export default function QnaPage() {
           <div className='w-20 flex justify-center items-center'>内容</div>
           <div className='flex justify-center items-center'>：</div>
           <textarea
-            className='w-full border-b-1 solid resize-none'
+            className='w-full border-b-1 solid resize-none focus:outline-none overflow-hidden'
             value={content}
             onChange={(e) => setContent(e.target.value)}
             placeholder='内容'

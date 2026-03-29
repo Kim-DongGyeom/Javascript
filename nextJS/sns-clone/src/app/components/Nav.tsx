@@ -12,38 +12,40 @@ import Image from 'next/image';
 export default function Nav() {
   const [search, SetSearch] = useState('');
   return (
-    <div className='flex justify-between border-1 solid round'>
+    <div className='flex justify-between border-1 solid round px-4'>
       {/* logo */}
-      <Link
-        href='/'
-        className='p-2 flex items-center justify-center rounded-full transition'
-      >
-        <div className='border rounded-full overflow-hidden'>
-          <Image
-            src='/assets/favicon.png'
-            alt='logo'
-            width={40}
-            height={40}
-            className='object-cover'
-            priority
-          />
-        </div>
-      </Link>
-      {/* nav */}
-      <div className='flex justify-center'>
-        {navItem.map((item, idx) => {
-          return (
-            <Link className='p-3' href={item.href} key={idx}>
-              {item.value}
-            </Link>
-          );
-        })}
-      </div>
       <div className='flex'>
+        <Link
+          href='/'
+          className='p-2 flex items-center justify-center rounded-full transition'
+        >
+          <div className='border rounded-full overflow-hidden'>
+            <Image
+              src='/assets/favicon.png'
+              alt='logo'
+              width={40}
+              height={40}
+              className='object-cover'
+              priority
+            />
+          </div>
+        </Link>
+        {/* nav */}
+        <div className='flex justify-center items-center ml-4'>
+          {navItem.map((item, idx) => {
+            return (
+              <Link className='px-3' href={item.href} key={idx}>
+                {item.value}
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+      <div className='flex justify-center items-center'>
         {/* search bar */}
-        <div className='p-3'>
+        <div className='relative w-45 mr-4'>
           <input
-            className='w-32 border-1 solid rounded-lg pl-2 mr-2'
+            className='w-full border rounded-lg px-2 p-1'
             type='text'
             placeholder='検索'
             onChange={(e) => {
@@ -52,12 +54,12 @@ export default function Nav() {
           />
           <button
             type='button'
+            className='absolute right-2 top-1/2 -translate-y-1/2 cursor-pointer'
             onClick={() => {
-              // 検索機能開発予定
               console.log(search);
             }}
           >
-            <IoIosSearch />
+            <IoIosSearch className='w-5 h-5' />
           </button>
         </div>
         {/* proflie */}
