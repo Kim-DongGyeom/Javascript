@@ -17,14 +17,11 @@ export default function QnaPage() {
   useEffect(() => {
     fetchList();
   }, []);
-  useEffect(() => {
-    console.log(title);
-    console.log(content);
-  }, [title, content]);
+  useEffect(() => {}, [title, content]);
 
   const handleCreate = async () => {
-    if ((!title?.trim(), !content?.trim())) {
-      alert('タイトル内容を');
+    if (!title?.trim() && !content?.trim()) {
+      alert('タイトル内容を入力してください。');
       return;
     }
 
@@ -81,33 +78,57 @@ export default function QnaPage() {
     }
   };
 
+  const handleCansel = () => {
+    setTitle('');
+    setContent('');
+    setEditId(null);
+    fetchList();
+  };
+
   return (
-    <div style={{ padding: '20px' }}>
-      <h1>Q&A掲示板</h1>
+    <div className='pt-5 w-full'>
+      <div className='flex justify-center text-3xl my-4'>
+        <h1>Q&A掲示板</h1>
+      </div>
 
-      {/* 入力 */}
-      <input
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-        placeholder='タイトル'
-      />
-      <br />
+      <div className='mb-4'>
+        {/* 入力 */}
+        <div className='flex mb-2'>
+          <div className='w-20 flex justify-center items-center'>タイトル</div>
+          <div>：</div>
+          <div className='w-full border-b-1 solid'>
+            <input
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              placeholder='タイトル'
+            />
+          </div>
+        </div>
+        <div className='flex'>
+          <div className='w-20 flex justify-center items-center'>内容</div>
+          <div className='flex justify-center items-center'>：</div>
+          <textarea
+            className='w-full border-b-1 solid resize-none'
+            value={content}
+            onChange={(e) => setContent(e.target.value)}
+            placeholder='内容'
+          />
+        </div>
+      </div>
 
-      <textarea
-        value={content}
-        onChange={(e) => setContent(e.target.value)}
-        placeholder='内容'
-      />
-      <br />
-
-      {/* CREATE / UPDATE ボタン */}
-      {editId ? (
-        <button onClick={handleUpdate}>修正</button>
-      ) : (
-        <button onClick={handleCreate}>登録</button>
-      )}
-
-      <hr />
+      <div className='flex justify-center items-center text-center'>
+        {/* CREATE / UPDATE ボタン */}
+        <div className='p-2 bg-sky-500 text-white rounded-xl w-22 mr-3'>
+          {editId ? (
+            <button onClick={handleUpdate}>修正</button>
+          ) : (
+            <button onClick={handleCreate}>登録</button>
+          )}
+        </div>
+        <div className='p-2 border-1 solid rounded-xl w-22'>
+          <button onClick={handleCansel}>キャンセル</button>
+        </div>
+      </div>
 
       {/* リスト */}
       {list.map((item) => (
