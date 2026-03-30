@@ -28,7 +28,7 @@ export async function GET() {
       content: true,
       created_at: true,
     },
-    orderBy: { id: 'asc' },
+    orderBy: { id: 'desc' },
   });
 
   return Response.json(data);

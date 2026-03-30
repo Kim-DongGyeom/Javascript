@@ -41,17 +41,22 @@ export async function PATCH(
 
 export async function DELETE(
   req: Request,
-  { params }: { params: { id: string } },
+  context: { params: Promise<{ id: string }> },
 ) {
+  const params = await context.params;
   const id = Number(params.id);
 
-  if (!id) {
+  if (isNaN(id)) {
     return new Response('Invalid ID', { status: 400 });
   }
 
-  await prisma.qna.delete({
-    where: { id },
-  });
-
-  return Response.json({ message: '削除完了' });
+  try {
+    await prisma.qna.delete({
+      where: { id },
+    });
+    return Response.json({ message: '削除完了' });
+  } catch (error) {
+    console.error(error);
+    return new Response('削除対象が存在しません', { status: 404 });
+  }
 }
