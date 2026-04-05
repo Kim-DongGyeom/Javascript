@@ -4,10 +4,9 @@ import { useState } from 'react';
 import { IoIosSearch } from 'react-icons/io';
 
 import Link from 'next/link';
-
-import navItem from '../../../util/navMap.json';
-import logo from '../favicon.ico';
 import Image from 'next/image';
+
+import navItem from '../../../../util/navMap.json';
 
 export default function Nav() {
   const [search, SetSearch] = useState('');
